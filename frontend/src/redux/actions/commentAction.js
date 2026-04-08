@@ -6,7 +6,7 @@ export const postComment = createAsyncThunk(
     'Post/Comment',
     async({id,comment}, {rejetWithValue})=>{
         try {
-            const {data} = await axios.post(`http://localhost:4500/api/addcomment/${id}`,{comment},{
+            const {data} = await axios.post(`https://mern-stack-blog-app-platform.onrender.com/api/addcomment/${id}`,{comment},{
                 headers:{'Content-Type':'application/json'},
                 withCredentials:true,
             })
@@ -24,7 +24,7 @@ export const getCommentbyPostId = createAsyncThunk(
     'Get/comment by postId',
     async(postId , { rejectWithValue }) =>{
         try {
-            const {data} = await axios.get(`http://localhost:4500/api/comments/${postId}`,{
+            const {data} = await axios.get(`https://mern-stack-blog-app-platform.onrender.com/api/comments/${postId}`,{
                 headers:{'Content-Type':'application/json'},
                 withCredentials:true,
             })
@@ -41,7 +41,7 @@ export const getcommentpagination = createAsyncThunk(
     'Get/ paginationcomment',
     async({page ,id}, {rejectWithValue})=>{
         try {
-            const {data} = await axios.get(`http://localhost:4500/api/comments/pagination/${id}?page=${page}&limit=3`,{
+            const {data} = await axios.get(`https://mern-stack-blog-app-platform.onrender.com/api/comments/pagination/${id}?page=${page}&limit=3`,{
                 headers:{'Content-Type':'application/json'},
                 withCredentials:true,
             })
@@ -59,7 +59,7 @@ export const commentofUserPost = createAsyncThunk(
     'Get/ UserComment',
     async(_ ,{rejectWithValue})=>{
         try {
-            const {data} = await axios.get('http://localhost:4500/api/allpostcomment/usercomment',{
+            const {data} = await axios.get('https://mern-stack-blog-app-platform.onrender.com/api/allpostcomment/usercomment',{
                 headers:{'Content-Type':'application/json'},
                 withCredentials:true,
             })

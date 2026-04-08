@@ -6,7 +6,7 @@ export const createpost=createAsyncThunk(
     'post/create',
     async(Data,{rejectWithValue})=>{
         try {
-            const {data}=await axios.post('http://localhost:4500/api/addblog',Data,{
+            const {data}=await axios.post('https://mern-stack-blog-app-platform.onrender.com/api/addblog',Data,{
                 headers:{'Content-Type':'application/json'},
                 withCredentials:true
             })
@@ -24,7 +24,7 @@ export const getallposts=createAsyncThunk(
     'post/GetPost',
     async( _ , { rejectWithValue })=>{
         try {
-            const {data}= await axios.get('http://localhost:4500/api/allblogs',{
+            const {data}= await axios.get('https://mern-stack-blog-app-platform.onrender.com/api/allblogs',{
                 headers:{'Content-Type':'application/json'},
                 withCredentials:true,
             })
@@ -42,7 +42,7 @@ export const getPostById=createAsyncThunk(
     'post/GetbyId',
     async( id , { rejectWithValue })=>{
         try {
-            const {data}= await axios.get(`http://localhost:4500/api/blog/${id}`,{
+            const {data}= await axios.get(`https://mern-stack-blog-app-platform.onrender.com/api/blog/${id}`,{
                 headers:{"Content-Type":'application/json'},
                 withCredentials:true,
             })
@@ -60,7 +60,7 @@ export const getPostByUser=createAsyncThunk(
     'post/AllPostFromUser',
     async( _ , { rejectWithValue })=>{
         try {
-            const {data}=await axios.get('http://localhost:4500/api/userblogs',{
+            const {data}=await axios.get('https://mern-stack-blog-app-platform.onrender.com/api/userblogs',{
                 headers:{'Content-Type':'application/json'},
                 withCredentials:true,
             })
@@ -78,7 +78,7 @@ export const SearchPost=createAsyncThunk(
     'Post/searchbyquery',
     async( queryname , { rejectWithValue })=>{
         try {
-            const {data}= await axios.get(`http://localhost:4500/api/blogs/search?query=${queryname}`,{
+            const {data}= await axios.get(`https://mern-stack-blog-app-platform.onrender.com/api/blogs/search?query=${queryname}`,{
                headers:{'Content-Type':"application/json"},
                withCredentials:true,
             })
@@ -96,7 +96,7 @@ export const increaseLike=createAsyncThunk(
     'post/IncreaseLike',
     async( id , { rejectWithValue } )=>{
         try {
-            const {data}= await axios.get(`http://localhost:4500/api/blog/like/${id}`,{
+            const {data}= await axios.get(`https://mern-stack-blog-app-platform.onrender.com/api/blog/like/${id}`,{
                headers:{'Content-Type':'application/json'},
                 withCredentials:true,
             })
@@ -115,7 +115,7 @@ export const manageView=createAsyncThunk(
     'post/ManageView',
     async( id , { rejectWithValue } )=>{
         try {
-            const {data}= await axios.get(`http://localhost:4500/api/blog/view/${id}`,{
+            const {data}= await axios.get(`https://mern-stack-blog-app-platform.onrender.com/api/blog/view/${id}`,{
                headers:{'Content-Type':'application/json'},
                 withCredentials:true,
             })
@@ -170,7 +170,7 @@ export const searchwithcategory = createAsyncThunk(
     'Post/searchwithcategory',
     async(category, {rejectWithValue})=>{
         try {
-            const {data} = await axios.post('http://localhost:4500/api/blog/search',{category},{
+            const {data} = await axios.post('https://mern-stack-blog-app-platform.onrender.com/api/blog/search',{category},{
                 headers:{'Content-Type':"application/json"},
                 withCredentials:true,
             })
@@ -189,7 +189,7 @@ export const getblogwithinfinite = createAsyncThunk(
     'Post/getblogwithinfinite',
     async(page, { rejectWithValue }) =>{
         try {
-            const {data} = await axios.get(`http://localhost:4500/api/blogs/scroll/infinite?page=${page}&limit=10`,{
+            const {data} = await axios.get(`https://mern-stack-blog-app-platform.onrender.com/api/blogs/scroll/infinite?page=${page}&limit=10`,{
                 headers:{'Content-Type':'application/json'},
                 withCredentials:true,
             })
@@ -207,7 +207,7 @@ export const deleteuserblog =createAsyncThunk(
     'delete/userblog',
     async(id , { rejectWithValue })=>{
         try {
-            const { data } = await axios.delete(`http://localhost:4500/api/blogs/delete/${id}`,{
+            const { data } = await axios.delete(`https://mern-stack-blog-app-platform.onrender.com/api/blogs/delete/${id}`,{
                 headers:{'Content-Type':'application/json'},
                 withCredentials:true,
             })
@@ -225,7 +225,7 @@ export const updatepostbyId = createAsyncThunk(
     'Patch/ updatepostbyid',
     async({ id , updatedata } , { rejectWithValue })=>{
         try {
-            const {data} = await axios.patch(`http://localhost:4500/api/blogs/update/${id}`,updatedata,{
+            const {data} = await axios.patch(`https://mern-stack-blog-app-platform.onrender.com/api/blogs/update/${id}`,updatedata,{
                 headers:{'Content-Type':'application/json'},
                 withCredentials:true,
             })
