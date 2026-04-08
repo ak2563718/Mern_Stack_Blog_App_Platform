@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { ProfileHeader } from "./ProfileHeader";
-import { Sidebar } from "./SideBar";
+import { Sidebar } from "./Sidebar";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getPostByUser } from "@/redux/actions/postAction";
