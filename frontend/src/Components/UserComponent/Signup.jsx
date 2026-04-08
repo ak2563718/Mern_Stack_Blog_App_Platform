@@ -74,7 +74,7 @@ export default function Signup() {
   },[error])
   
     const handleGooglelogin = ()=>{
-    window.location.href = 'http://localhost:4500/api/google'
+    window.location.href = 'https://mern-stack-blog-app-platform.onrender.com/api/google'
   }
  
   return (

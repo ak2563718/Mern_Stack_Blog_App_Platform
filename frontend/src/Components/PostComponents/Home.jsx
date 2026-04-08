@@ -33,6 +33,8 @@ export default function Home() {
   const dispatch = useDispatch()
   const navigate = useNavigate()
  
+  console.log(blogs)
+  
   useEffect(()=>{
    const delay = setTimeout(() => {
       if(searchQuery.length > 0){
@@ -138,7 +140,7 @@ export default function Home() {
                   className="aspect-video overflow-hidden"
                 >
                   <img
-                    src={post.coverImage.secure_url}
+                    src={post.coverImage?.secure_url}
                     alt={post.title}
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />

@@ -20,7 +20,19 @@ app.use(cors({
     credentials:true,
 }))
 app.use(cookieParser())
-app.use(helmet())
+app.use(helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        imgSrc: [
+          "'self'",
+          "data:",
+          "https://res.cloudinary.com"
+        ],
+      },
+    },
+  }))
+  
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(passport.initialize())
