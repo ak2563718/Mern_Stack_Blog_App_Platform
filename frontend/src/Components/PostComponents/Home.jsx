@@ -32,9 +32,8 @@ export default function Home() {
   const { openOnce } = useSelector((state)=>state.user)
   const dispatch = useDispatch()
   const navigate = useNavigate()
- 
-  console.log(blogs)
-  
+
+
   useEffect(()=>{
    const delay = setTimeout(() => {
       if(searchQuery.length > 0){
