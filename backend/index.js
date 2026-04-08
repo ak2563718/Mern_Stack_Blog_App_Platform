@@ -15,11 +15,6 @@ import path from 'path'
 const app = express();
 dotenv.config();
 const _dirname = path.resolve();
-app.use(cors({
-    origin:process.env.CLIENT_URL,
-    credentials:true,
-}))
-app.use(cookieParser())
 app.use(
   helmet({
     contentSecurityPolicy: {
@@ -40,6 +35,12 @@ app.use(
     },
   })
 );
+app.use(cors({
+    origin:process.env.CLIENT_URL,
+    credentials:true,
+}))
+app.use(cookieParser())
+
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(passport.initialize())
