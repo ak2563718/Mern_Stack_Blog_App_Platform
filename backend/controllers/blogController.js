@@ -1,4 +1,4 @@
-import { asyncHandler } from "../utils/asynchandler.js";
+import { asyncHandler } from "../utils/asyncHandler.js";
 import { AppError } from "../utils/AppError.js"
 import { Blog } from "../models/blogModel.js";
 import cloudinary from "../configuration/cloudinary.js";

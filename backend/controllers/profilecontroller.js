@@ -1,6 +1,6 @@
 import { Profile } from "../models/profileModel.js";
 import { AppError } from "../utils/AppError.js";
-import { asyncHandler } from "../utils/asynchandler.js";
+import { asyncHandler } from "../utils/asyncHandler.js";
 import cloudinary from "../configuration/cloudinary.js";
 
 // 1. create Profile

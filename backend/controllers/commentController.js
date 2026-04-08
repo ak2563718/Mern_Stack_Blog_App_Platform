@@ -1,7 +1,7 @@
 import { Blog } from "../models/blogModel.js";
 import { Comment } from "../models/commentModel.js";
 import { AppError } from "../utils/AppError.js";
-import { asyncHandler } from "../utils/asynchandler.js";
+import { asyncHandler } from "../utils/asyncHandler.js";
 
 
 

@@ -1,7 +1,7 @@
 {
   "name": "backend2",
   "version": "1.0.0",
-  "description": "This is the updated code verion of backend blog app with no tryCatch all controllers will depend on asynchandler",
+  "description": "This is the updated code verion of backend blog app with no tryCatch all controllers will depend on asyncHandler",
   "license": "ISC",
   "author": "akash kumar",
   "type": "module",

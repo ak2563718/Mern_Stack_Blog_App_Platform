@@ -37,7 +37,7 @@ app.get(/.*/,(_, res)=>{
 })
 
 app.use(errorMiddleware)
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 const uri = process.env.MONGO_URI;
 app.listen(port,async()=>{
    await dbconnect(uri)

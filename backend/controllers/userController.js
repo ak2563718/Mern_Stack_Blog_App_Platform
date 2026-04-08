@@ -4,7 +4,7 @@ import { sendOtpEmail } from "../configuration/resend.js";
 import { decodeUser, encodeemail, encodeUser} from "../configuration/tokenCreation.js";
 import { UserData } from "../models/userModel.js";
 import { AppError } from "../utils/AppError.js";
-import { asyncHandler } from "../utils/asynchandler.js";
+import { asyncHandler } from "../utils/asyncHandler.js";
 import { passwordChecker, validateEmail, validatephone } from "../utils/validate.js";
 import bcrypt from 'bcrypt'
 import passpost from '../configuration/passport.js'
