@@ -206,7 +206,7 @@ export const getgoogleuser = asyncHandler(async(req, res, next)=>{
         sameSite:"none",
         maxAge:60*60*60*1000,
     })
-    res.redirect('http://localhost:5173')
+    res.redirect('https://mern-stack-blog-app-platform.onrender.com/home')
 })
 
 
